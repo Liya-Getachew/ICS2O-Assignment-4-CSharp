@@ -33,7 +33,7 @@ class Program
         else if (topping == "glazed")
         {
             toppingPrice = 2.00;
-        } 
+        }
         else if (topping == "jam filling")
         {
             toppingPrice = 1.00;
@@ -46,7 +46,7 @@ class Program
         {
             toppingPrice = 3.00;
         }
-        else 
+        else
         {
             toppingPrice = 0.00;
         }
@@ -63,7 +63,7 @@ class Program
         {
             sizePrice = 15.00;
         }
-        else 
+        else
         {
             sizePrice = 0.00;
         }
@@ -79,7 +79,7 @@ class Program
 
         Console.WriteLine("Taxes 13%");
 
-        double totalPrice = ((sizePrice + toppingPrice) * TAX_RATE); 
+        double totalPrice = ((sizePrice + toppingPrice) * TAX_RATE);
 
         Console.WriteLine("Total " + "$" + Math.Round(totalPrice, 2));
         Console.WriteLine("Thanks for purchasing!");
