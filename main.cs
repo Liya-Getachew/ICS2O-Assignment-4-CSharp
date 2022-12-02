@@ -9,27 +9,74 @@ class Program
 {
     public static void Main(string[] args)
     {
-        // This function generates a random number from 1-6
-        Random random = new System.Random();
-        int randomNumber = random.Next(1, 6);
-        int randomNumber2 = random.Next(-6, -1);
-        string choice;
+        // This function calculates total price of user's order
+        string topping;
+        string size;
+        double TAX_RATE = 1.13;
+        double toppingPrice = 0;
+        double sizePrice = 0;
 
-        Console.WriteLine("Would you rather: positive or negative?");
-        Console.WriteLine("enter pos for positive or neg for negative");
+        Console.WriteLine("Welcome to Donuteria!");
+        Console.WriteLine("Insert your prefered box size and topping below.");
         Console.WriteLine();
 
-        Console.Write("your choice: ");
-        choice = Console.ReadLine();
+        Console.Write("box size: ");
+        size = Console.ReadLine();
 
-        if (choice == "pos")
+        Console.Write("topping: ");
+        topping = Console.ReadLine();
+
+        if (topping == "sprinkles")
         {
-            Console.WriteLine("Your positive number is: " + randomNumber + ".");
+            toppingPrice = 1.00;
         }
-        else
+        else if (topping == "glazed")
         {
-            Console.WriteLine("Your negative number is: " + randomNumber2 + ".");
+            toppingPrice = 2.00;
+        } else if (topping == "jam filling")
+        {
+            toppingPrice = 1.50;
+        } else if (topping == "powdered sugar")
+        {
+            toppingPrice = 1.00;
+        } else if (topping == "caramel")
+        {
+            toppingPrice = 3.00;
+        } else 
+        {
+            toppingPrice = 0.00;
         }
+
+        if (size == "one")
+        {
+            sizePrice = 1.00;
+        }
+        else if (size == "six")
+        {
+            sizePrice = 7.00;
+        } else if (size == "twelve")
+        {
+            sizePrice = 15.00;
+        } else 
+        {
+            sizePrice = 0.00;
+        }
+
+        Console.WriteLine("");
+        Console.WriteLine("Receipt");
+        Console.WriteLine("");
+
+        Console.WriteLine("Item ----- Cost");
+        Console.WriteLine(size + " $" + Math.Round(sizePrice, 2));
+        Console.WriteLine(topping + " $" + Math.Round(toppingPrice, 2));
+        Console.WriteLine("");
+
+        Console.WriteLine("Taxes 13%");
+
+        double totalPrice = ((sizePrice + toppingPrice) * TAX_RATE); 
+
+        Console.WriteLine("Total " + "$" + Math.Round(totalPrice, 2));
+        Console.WriteLine("Thanks for purchasing!");
 
         Console.WriteLine("\nDone.");
     }
