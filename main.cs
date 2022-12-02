@@ -33,16 +33,20 @@ class Program
         else if (topping == "glazed")
         {
             toppingPrice = 2.00;
-        } else if (topping == "jam filling")
-        {
-            toppingPrice = 1.50;
-        } else if (topping == "powdered sugar")
+        } 
+        else if (topping == "jam filling")
         {
             toppingPrice = 1.00;
-        } else if (topping == "caramel")
+        }
+        else if (topping == "powdered sugar")
+        {
+            toppingPrice = 1.00;
+        }
+        else if (topping == "caramel")
         {
             toppingPrice = 3.00;
-        } else 
+        }
+        else 
         {
             toppingPrice = 0.00;
         }
@@ -54,10 +58,12 @@ class Program
         else if (size == "six")
         {
             sizePrice = 7.00;
-        } else if (size == "twelve")
+        }
+        else if (size == "twelve")
         {
             sizePrice = 15.00;
-        } else 
+        }
+        else 
         {
             sizePrice = 0.00;
         }
