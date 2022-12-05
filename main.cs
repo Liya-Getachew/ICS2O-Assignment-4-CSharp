@@ -17,7 +17,7 @@ class Program
         double sizePrice = 0;
 
         Console.WriteLine("Welcome to Donuteria!");
-        Console.WriteLine("Insert your prefered box size and topping below.");
+        Console.WriteLine("Insert your preferred box size and topping below.");
         Console.WriteLine();
 
         Console.Write("box size: ");
@@ -36,7 +36,7 @@ class Program
         }
         else if (topping == "jam filling")
         {
-            toppingPrice = 1.00;
+            toppingPrice = 1.50;
         }
         else if (topping == "powdered sugar")
         {
@@ -73,15 +73,15 @@ class Program
         Console.WriteLine("");
 
         Console.WriteLine("Item ----- Cost");
-        Console.WriteLine(size + " $" + Math.Round(sizePrice, 2));
-        Console.WriteLine(topping + " $" + Math.Round(toppingPrice, 2));
+        Console.WriteLine(size + " $" + sizePrice.ToString("0.00"));
+        Console.WriteLine(topping + " $" + toppingPrice.ToString("0.00"));
         Console.WriteLine("");
 
         Console.WriteLine("Taxes 13%");
 
         double totalPrice = ((sizePrice + toppingPrice) * TAX_RATE);
 
-        Console.WriteLine("Total " + "$" + Math.Round(totalPrice, 2));
+        Console.WriteLine("Total " + "$" + totalPrice.ToString("0.00"));
         Console.WriteLine("Thanks for purchasing!");
 
         Console.WriteLine("\nDone.");
